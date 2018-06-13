@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: xilften_development
+test:
+  <<: *default
+  database: xilften_test
+
+production:
+  <<: *default
+  database: xilften_production
+  username: xilften
+  password: <%= ENV['XILFTEN_DATABASE_PASSWORD'] %>
