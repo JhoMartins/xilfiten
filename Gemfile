@@ -43,6 +43,8 @@ gem 'fast_jsonapi', git: "https://github.com/Netflix/fast_jsonapi", branch: "dev
 gem 'pg_search'
 # Permite utilizar vue dentro do rails
 gem  'webpacker'
+#Permite rodar vários comandos e startar N servers
+gem 'foreman'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
