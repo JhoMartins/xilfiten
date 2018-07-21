@@ -10,7 +10,7 @@
           <v-icon color="white">clear</v-icon>
         </v-btn>
       </v-flex>
-      <!-- <Details v-if="contentActive == 'details'" /> -->
+      <Details v-if="contentActive == 'details'" :watchable="watchable" />
       <!-- <Episodes v-if="contentActive == 'episodes'"/> -->
       <!-- <Reviews v-if="contentActive == 'reviews'" /> -->
     </v-layout>
@@ -35,6 +35,7 @@
 </template>
 
 <script>
+  import Details from './_details.vue';
   // ------- Dados Fake apenas para testarmos o layout -------- //
   const watchable = {
     id: 1,
@@ -53,7 +54,7 @@
         type: Number,
         required: true,
       },
-      kind: {
+      type: {
         type: String,
         required: true,
       },
@@ -77,6 +78,7 @@
       }
     },
     components: {
+      'Details': Details
     }
   }
 </script>
